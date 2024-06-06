@@ -1,0 +1,368 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2024-06-06T01:04:25.390517+00:00",
+  "repo": "dhs-aws/wimse-token-exch-design-team",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 2,
+      "id": "I_kwDOLqam7s6FMo34",
+      "title": "Develop Use Cases",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/issues/2",
+      "state": "OPEN",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Develop the use cases language for token exchange.  ",
+      "createdAt": "2024-04-10T03:23:01Z",
+      "updatedAt": "2024-04-15T17:59:47Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "dhs-aws",
+          "authorAssociation": "OWNER",
+          "body": "@adeinega in slack shared the following:\r\n\r\nI don't how this would be useful for anyone from you... but these use cases just from the top of my head... after some research\r\n\r\nworkloadA doesn't have any \"incoming\" token but has its own service account token and wants to obtain an access token in order to talk to workloadB\r\n\r\nworkloadA has both an \"incoming\" Bearer token and its own service account token and wants to obtain an access token in order to talk to workloadB\r\n\r\nworkloadA has both an \"incoming\" DPoP token and its own service account token and wants to obtain an access token in order to talk to workloadB",
+          "createdAt": "2024-04-10T03:27:20Z",
+          "updatedAt": "2024-04-10T03:27:20Z"
+        },
+        {
+          "author": "gffletch",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We may want to consider more than just hop-to-hop protections and think about a transaction as a unit regardless of how many workloads are involved. This doesn't negate the need for hop-to-hop protections or use cases.\n\nThe use cases listed apply to transactions as well as individual messages.",
+          "createdAt": "2024-04-15T17:58:36Z",
+          "updatedAt": "2024-04-15T17:58:36Z"
+        },
+        {
+          "author": "gffletch",
+          "authorAssociation": "COLLABORATOR",
+          "body": "For the 3rd use case, we should probably consider it to cover any sender constrained token regardless of method (DPoP, HTTP Signatures, mTLS bound tokens, etc).",
+          "createdAt": "2024-04-15T17:59:46Z",
+          "updatedAt": "2024-04-15T17:59:46Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOLqam7s6FMpEN",
+      "title": "Develop security considerations",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/issues/3",
+      "state": "OPEN",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Develop a set of security considerations that guide the development of the protocol(s).  ",
+      "createdAt": "2024-04-10T03:24:09Z",
+      "updatedAt": "2024-04-15T18:02:18Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "gffletch",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The security required is often a function of risk. We may need multiple options to cover different levels of risk.\n\nAs an example, transaction tokens are intentionally bearer tokens to address mix of performance and improved security. I would not recommend them for solutions where sender constrained tokens are required for every hop (at least not with the technology that we have today).",
+          "createdAt": "2024-04-15T18:02:16Z",
+          "updatedAt": "2024-04-15T18:02:16Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOLqam7s6GquZT",
+      "title": "Glossary of our terminology",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/issues/4",
+      "state": "OPEN",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Define terminology:\r\n\r\n- workload\r\n- workload identity\r\n- token translation\r\n- etc",
+      "createdAt": "2024-04-23T16:58:46Z",
+      "updatedAt": "2024-04-23T16:58:46Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOLqam7s5sGSIs",
+      "title": "Rename draft-wimse-token-exchange-saxe-protocol.md to draft-saxes-wim\u2026",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/1",
+      "state": "MERGED",
+      "author": "jricher",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\u2026se-token-exchange-protocol.md\r\n\r\nThis renames the document following IETF general practice.",
+      "createdAt": "2024-04-09T07:49:23Z",
+      "updatedAt": "2024-06-04T03:22:39Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "main",
+      "baseRefOid": "be81451a24fabded7ba42cd08f66955a485c26e3",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "rename-doc",
+      "headRefOid": "5d6c72c8f08bd23caee1b671756c54d1777663ae",
+      "closedAt": "2024-06-04T03:22:38Z",
+      "mergedAt": "2024-06-04T03:22:38Z",
+      "mergedBy": "dhs-aws",
+      "mergeCommit": {
+        "oid": "7b544a594e6b52e5d55410cae899aff43f7bdd02"
+      },
+      "comments": [
+        {
+          "author": "dhs-aws",
+          "authorAssociation": "OWNER",
+          "body": "saxes?  There's more than one of me? ;)",
+          "createdAt": "2024-04-10T03:21:52Z",
+          "updatedAt": "2024-04-10T03:21:52Z"
+        },
+        {
+          "author": "jricher",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Looks like the internal variable needs to be changed at the same time anyway -- but the format is:\r\n\r\n`draft-<author>-<group>-<topic>`\r\n\r\nThis would be changed to `draft-<ietf>-<group>-<topic>` once adopted.",
+          "createdAt": "2024-04-10T08:57:31Z",
+          "updatedAt": "2024-04-10T08:57:31Z"
+        },
+        {
+          "author": "jricher",
+          "authorAssociation": "COLLABORATOR",
+          "body": "https://authors.ietf.org/naming-your-internet-draft",
+          "createdAt": "2024-04-10T08:58:01Z",
+          "updatedAt": "2024-04-10T08:58:01Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOLqam7s5xXtZ2",
+      "title": "Updating the doc configuration",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/5",
+      "state": "MERGED",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Configuring the doc variables",
+      "createdAt": "2024-06-04T03:29:13Z",
+      "updatedAt": "2024-06-04T03:41:43Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "rename-doc",
+      "baseRefOid": "5d6c72c8f08bd23caee1b671756c54d1777663ae",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "doc-config",
+      "headRefOid": "8bad0b29100056a0329c9e1212c040a5cb58c8b3",
+      "closedAt": "2024-06-04T03:41:42Z",
+      "mergedAt": "2024-06-04T03:41:42Z",
+      "mergedBy": "dhs-aws",
+      "mergeCommit": {
+        "oid": "bc7e1e023f59031811ad4e702eb8fce3105c0ab1"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOLqam7s5xXw9i",
+      "title": "Update draft-saxe-wimse-token-exchange-and-translation-protocol.md",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/6",
+      "state": "CLOSED",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "I'm trying to figure out why renaming the files is breaking the build.",
+      "createdAt": "2024-06-04T03:46:33Z",
+      "updatedAt": "2024-06-04T03:49:51Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "main",
+      "baseRefOid": "7b544a594e6b52e5d55410cae899aff43f7bdd02",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "repo-configuration",
+      "headRefOid": "f4deb0bf1d8515b727daa64b802cecd7c414a50e",
+      "closedAt": "2024-06-04T03:49:51Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOLqam7s5xXxqD",
+      "title": "Rename doc",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/7",
+      "state": "MERGED",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-06-04T03:50:33Z",
+      "updatedAt": "2024-06-04T03:51:01Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "main",
+      "baseRefOid": "7b544a594e6b52e5d55410cae899aff43f7bdd02",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "rename-doc",
+      "headRefOid": "bc7e1e023f59031811ad4e702eb8fce3105c0ab1",
+      "closedAt": "2024-06-04T03:50:45Z",
+      "mergedAt": "2024-06-04T03:50:45Z",
+      "mergedBy": "dhs-aws",
+      "mergeCommit": {
+        "oid": "a6e87ad0b11d50656115566263979ddcd4a9d3a8"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOLqam7s5xetvc",
+      "title": "Initial text for the abstract",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/8",
+      "state": "OPEN",
+      "author": "dhs-aws",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-06-04T22:53:30Z",
+      "updatedAt": "2024-06-04T23:17:41Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "main",
+      "baseRefOid": "7e5ef482922292ff6edc2d6e51926e49e355ddc0",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "Abstract-and-Introduction-Development",
+      "headRefOid": "43b19a9c890d4ac0c5346e2c4a3b60ed04178ee6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOLqam7s5xgP_Q",
+      "title": "Validate build errors",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/9",
+      "state": "OPEN",
+      "author": "idimaster",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Test reasons for errors",
+      "createdAt": "2024-06-05T05:48:48Z",
+      "updatedAt": "2024-06-05T06:29:17Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "main",
+      "baseRefOid": "7e5ef482922292ff6edc2d6e51926e49e355ddc0",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "build-check",
+      "headRefOid": "4ab2bb05a66eca10e30edbbc86c3a07e15ac53aa",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOLqam7s5xhgDX",
+      "title": "Update setup",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/10",
+      "state": "MERGED",
+      "author": "jricher",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- rename doc\n- ignore lib\n- update configuration\n- Remove old README.md\n- Automatic update of README.md\n- Automatic update of venue information\n- update ignore\n",
+      "createdAt": "2024-06-05T09:09:31Z",
+      "updatedAt": "2024-06-05T15:36:09Z",
+      "baseRepository": "dhs-aws/wimse-token-exch-design-team",
+      "baseRefName": "main",
+      "baseRefOid": "7e5ef482922292ff6edc2d6e51926e49e355ddc0",
+      "headRepository": "dhs-aws/wimse-token-exch-design-team",
+      "headRefName": "rename-doc-setup",
+      "headRefOid": "b735c057a0d1368f9dcae710dab875d84b05597d",
+      "closedAt": "2024-06-05T15:35:27Z",
+      "mergedAt": "2024-06-05T15:35:27Z",
+      "mergedBy": "dhs-aws",
+      "mergeCommit": {
+        "oid": "9de0489f254a91590787f08347b47ed70287fcda"
+      },
+      "comments": [
+        {
+          "author": "dhs-aws",
+          "authorAssociation": "OWNER",
+          "body": "Thanks, Justin!",
+          "createdAt": "2024-06-05T15:35:34Z",
+          "updatedAt": "2024-06-05T15:35:34Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOLqam7s59JO1J",
+          "commit": {
+            "abbreviatedOid": "b735c05"
+          },
+          "author": "dhs-aws",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "lgtm",
+          "createdAt": "2024-06-05T15:36:09Z",
+          "updatedAt": "2024-06-05T15:36:09Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
