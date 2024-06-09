@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-06T01:04:25.390517+00:00",
+  "timestamp": "2024-06-09T01:10:39.219444+00:00",
   "repo": "dhs-aws/wimse-token-exch-design-team",
   "labels": [
     {
@@ -274,13 +274,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2024-06-04T22:53:30Z",
-      "updatedAt": "2024-06-04T23:17:41Z",
+      "updatedAt": "2024-06-07T22:55:24Z",
       "baseRepository": "dhs-aws/wimse-token-exch-design-team",
       "baseRefName": "main",
       "baseRefOid": "7e5ef482922292ff6edc2d6e51926e49e355ddc0",
       "headRepository": "dhs-aws/wimse-token-exch-design-team",
       "headRefName": "Abstract-and-Introduction-Development",
-      "headRefOid": "43b19a9c890d4ac0c5346e2c4a3b60ed04178ee6",
+      "headRefOid": "d46bc8486eb3ce1a87f78422b7639b2b56b73ff4",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
