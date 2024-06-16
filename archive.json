@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-13T01:05:27.031567+00:00",
+  "timestamp": "2024-06-16T01:10:41.686493+00:00",
   "repo": "dhs-aws/wimse-token-exch-design-team",
   "labels": [
     {
@@ -267,24 +267,26 @@
       "id": "PR_kwDOLqam7s5xetvc",
       "title": "Initial text for the abstract",
       "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/pull/8",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "dhs-aws",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-06-04T22:53:30Z",
-      "updatedAt": "2024-06-07T22:55:24Z",
+      "updatedAt": "2024-06-13T16:57:32Z",
       "baseRepository": "dhs-aws/wimse-token-exch-design-team",
       "baseRefName": "main",
       "baseRefOid": "7e5ef482922292ff6edc2d6e51926e49e355ddc0",
       "headRepository": "dhs-aws/wimse-token-exch-design-team",
       "headRefName": "Abstract-and-Introduction-Development",
-      "headRefOid": "d46bc8486eb3ce1a87f78422b7639b2b56b73ff4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "11907542d63f6af4ddd8098d1f743ad3c58752c2",
+      "closedAt": "2024-06-13T16:57:32Z",
+      "mergedAt": "2024-06-13T16:57:32Z",
+      "mergedBy": "dhs-aws",
+      "mergeCommit": {
+        "oid": "774cf1c0f918b66db75b57e58a473649b15adba9"
+      },
       "comments": [],
       "reviews": []
     },
