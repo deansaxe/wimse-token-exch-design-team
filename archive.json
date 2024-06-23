@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-06-20T01:04:10.076809+00:00",
+  "timestamp": "2024-06-23T01:09:56.816711+00:00",
   "repo": "dhs-aws/wimse-token-exch-design-team",
   "labels": [
     {
@@ -142,6 +142,22 @@
           "updatedAt": "2024-06-18T20:42:57Z"
         }
       ]
+    },
+    {
+      "number": 12,
+      "id": "I_kwDOLqam7s6M_B43",
+      "title": "Kerberos service tickets and token exchange",
+      "url": "https://github.com/dhs-aws/wimse-token-exch-design-team/issues/12",
+      "state": "OPEN",
+      "author": "adeinega",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We might really want to include a token exchange (or transition) use case where Kerberos service tickets (ST) get involved. As as example, a workload provides a Kerberos ST to an AS using typical approach \"Authorization: Negotiate ****\" for that. Then, an AS issues an OAuth Bearer (or any other token) if this AS \r\n1. successfully validates provided Kerberos ST, and\r\n2. allows this sort of operation for a caller\r\n\r\nThere are lots of Orgs completely or partially in a Windows shop, and they want their apps to talk to apps that use OAuth and so forth with a minimal set of changes (leveraging and leaving unchanged what MS Windows AD provides to their legacy apps).\r\n\r\nThere is a need for this use case in the way I see it, despite the fact that Kerberos is a 30 years old protocol.",
+      "createdAt": "2024-06-20T21:50:39Z",
+      "updatedAt": "2024-06-20T21:50:39Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -393,13 +409,13 @@
       "labels": [],
       "body": "Added additional content to the intro, addressed definitions of security token, sts, delegation, and impersonation from RFC8693.",
       "createdAt": "2024-06-19T03:28:30Z",
-      "updatedAt": "2024-06-19T21:40:03Z",
+      "updatedAt": "2024-06-20T15:57:25Z",
       "baseRepository": "dhs-aws/wimse-token-exch-design-team",
       "baseRefName": "main",
       "baseRefOid": "c50573a0cbc999611c307037837b4a48a84f90c4",
       "headRepository": "dhs-aws/wimse-token-exch-design-team",
       "headRefName": "introduction-updates",
-      "headRefOid": "4ad92e628ac4cac6430c33082918ad05251dc2a8",
+      "headRefOid": "8d2255a98322a8877831b8cd54a9bbdb7c58e22f",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
