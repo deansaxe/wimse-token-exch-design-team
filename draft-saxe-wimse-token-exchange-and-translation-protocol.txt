@@ -15,16 +15,17 @@ ISSN: 2070-1721                                              Capital One
 Abstract
 
    The specification defines the processes of token exchange and token
-   translation for workloads.  Token exchange is well defined for OAuth
-   2.0 in RFC8693, allowing the exchange of access tokens, refresh
-   tokens, OpenID Connect ID Token ([OIDC]), and SAML assertions for new
-   OAuth access tokens.  However, for workloads, there exist a broad
-   array of input and output token types which must be considered beyond
-   the input types supported by [RFC8693].  These token types include,
-   but are not limited to, SPIFFE SVIDs, x.509 certificates, Amazon
-   sigv4A, macaroons, <...>.  Further, these tokens may be encoded in
-   formats including JWT, CBOR, and protocol buffers (protobufs).  Given
-   the variety and complexity of input and output token types and
+   translation for workloads.  Token exchange is introduced in
+   [RFC8693], allowing the exchange of access tokens, refresh tokens,
+   OpenID Connect ID Token (OIDC), and SAML assertions for new OAuth
+   access tokens.  However, for workloads, there exist a broad array of
+   input and output token types which must be considered beyond the
+   input types supported by [RFC8693].  These token types include, but
+   are not limited to, SPIFFE SVIDs, x.509 certificates, Kerberos
+   service tickets, Amazon sigv4A, macaroons, <...>.  Further, these
+   tokens may be encoded in formats including JWT OAuth 2.0 Acesss
+   Tokens [RFC9068], CWT [RFC8392], and protocol buffers (protobufs).
+   Given the variety and complexity of input and output token types and
    encoding, a strict token exchange that maintains all of the
    contextual information from the input token to the output token may
    not be possible.  We define these non-RFC8693 use cases with
@@ -33,7 +34,8 @@ Abstract
    describe a workload profile for token exchange, using the mechanisms
    in [RFC8693], and a new set of translations between arbitrary token
    types.  Additionally, we define mechanisms to enrich tokens during
-   translation to support the use cases defined in "Use Cases Doc".
+   translation to support the use cases defined in (todo: add link to
+   use cases doc).
 
 Status of This Memo
 
@@ -246,10 +248,18 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
+   [RFC8392]  Jones, M., Wahlstroem, E., Erdtman, S., and H. Tschofenig,
+              "CBOR Web Token (CWT)", RFC 8392, DOI 10.17487/RFC8392,
+              May 2018, <https://www.rfc-editor.org/rfc/rfc8392>.
+
    [RFC8693]  Jones, M., Nadalin, A., Campbell, B., Ed., Bradley, J.,
               and C. Mortimore, "OAuth 2.0 Token Exchange", RFC 8693,
               DOI 10.17487/RFC8693, January 2020,
               <https://www.rfc-editor.org/rfc/rfc8693>.
+
+   [RFC9068]  Bertocci, V., "JSON Web Token (JWT) Profile for OAuth 2.0
+              Access Tokens", RFC 9068, DOI 10.17487/RFC9068, October
+              2021, <https://www.rfc-editor.org/rfc/rfc9068>.
 
 Acknowledgments
 
