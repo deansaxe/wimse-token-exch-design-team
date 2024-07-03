@@ -7,16 +7,17 @@
 <title>RFC 1: WIMSE Token Exchange and Translation Protocol</title>
 <meta content="Dean H. Saxe" name="author">
 <meta content="George Fletcher" name="author">
+<meta content="Andrii Deinega" name="author">
 <meta content='
        The specification defines the processes of token exchange and token translation for workloads.  Token exchange is well defined for OAuth 2.0 in RFC8693, allowing the exchange of access tokens, refresh tokens, OpenID Connect ID Token ( ), and SAML assertions for new OAuth access tokens. However, for workloads, there exist a broad array of input and output token types which must be considered beyond the input types supported by  .  These token types include, but are not limited to, SPIFFE SVIDs, x.509 certificates, Amazon sigv4A, macaroons, &lt;...&gt;.  Further, these tokens may be encoded in formats including JWT, CBOR, and protocol buffers (protobufs).  Given the variety and complexity of input and output token types and encoding, a strict token exchange that maintains all of the contextual information from the input token to the output token may not be possible.  We define these non-RFC8693 use cases with potentially lossy conversions as "token translation" (e.g. information may be lost in translation).   In this document we describe a workload profile for token exchange, using the mechanisms in  , and a new set of translations between arbitrary token types.  Additionally, we define mechanisms to enrich tokens during translation to support the use cases defined in "Use Cases Doc". 
     ' name="description">
-<meta content="xml2rfc 3.21.0" name="generator">
+<meta content="xml2rfc 3.22.0" name="generator">
 <meta content="workload identity" name="keyword">
 <meta content="token exchange" name="keyword">
 <meta content="token translation" name="keyword">
 <meta content="1" name="rfc.number">
 <!-- Generator version information:
-  xml2rfc 3.21.0
+  xml2rfc 3.22.0
     Python 3.12.3
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
@@ -26,9 +27,8 @@
     platformdirs 4.2.2
     pycountry 22.3.5
     PyYAML 6.0.1
-    requests 2.31.0
+    requests 2.32.3
     setuptools 69.5.1
-    six 1.16.0
     wcwidth 0.2.13
 -->
 <link href="draft-saxe-wimse-token-exchange-and-translation-protocol.xml" rel="alternate" type="application/rfc+xml">
@@ -1034,7 +1034,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <td class="right">July 2024</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Saxe &amp; Fletcher</td>
+<td class="left">Saxe, et al.</td>
 <td class="center">Informational</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
@@ -1050,7 +1050,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="category">Informational</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-07-02" class="published">2 July 2024</time>
+<time datetime="2024-07-03" class="published">3 July 2024</time>
     </dd>
 <dt class="label-issn">ISSN:</dt>
 <dd class="issn">2070-1721</dd>
@@ -1063,6 +1063,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <div class="author">
       <div class="author-name">G. Fletcher</div>
 <div class="org">Capital One</div>
+</div>
+<div class="author">
+      <div class="author-name">A. Deinega</div>
 </div>
 </dd>
 </dl>
@@ -1345,6 +1348,13 @@ appear in all capitals, as shown here.<a href="#section-7-1" class="pilcrow">¶<
 <div class="email">
 <span>Email:</span>
 <a href="mailto:george.fletcher@capitalone.com" class="email">george.fletcher@capitalone.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Andrii Deinega</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:andrii.deinega@gmail.com" class="email">andrii.deinega@gmail.com</a>
 </div>
 </address>
 </section>

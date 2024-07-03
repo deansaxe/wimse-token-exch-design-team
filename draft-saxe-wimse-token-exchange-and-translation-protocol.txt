@@ -6,7 +6,8 @@ Internet Engineering Task Force (IETF)                        D. H. Saxe
 Request for Comments: 1                              Amazon Web Services
 Category: Informational                                      G. Fletcher
 ISSN: 2070-1721                                              Capital One
-                                                             2 July 2024
+                                                              A. Deinega
+                                                             3 July 2024
 
 
              WIMSE Token Exchange and Translation Protocol
@@ -264,3 +265,7 @@ Authors' Addresses
    George Fletcher
    Capital One
    Email: george.fletcher@capitalone.com
+
+
+   Andrii Deinega
+   Email: andrii.deinega@gmail.com
