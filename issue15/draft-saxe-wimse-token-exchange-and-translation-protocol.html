@@ -1266,8 +1266,9 @@ appear in all capitals, as shown here.<a href="#section-7-1" class="pilcrow">¶<
       <h2 id="name-security-considerations">
 <a href="#section-8" class="section-number selfRef">8. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-8-1">An AS performing token exchange <span class="bcp14">SHOULD</span> ensure it is the intended audience of a token being exchanged, and a client (whether it is an OAuth client or a workload) performing an exchange is allowed to perform such operation.
-A value in the subject_token_type parameter <span class="bcp14">MUST</span> correspond to an actual token type provided in the subject_token parameter.
+<p id="section-8-1">An AS performing token exchange <span class="bcp14">MUST</span> ensure a client (whether it is an OAuth client or a workload) performing an exchange and a provied token is allowed to perform such operation on it.
+An AS <span class="bcp14">SHOULD</span> ensure it is also the intended audience of a token being exchanged.
+A value in the subject_token_type parameter <span class="bcp14">MUST</span> correspond to an actual token type provided in the subject_token parameter (<span>[<a href="#RFC8693" class="cite xref">RFC8693</a>]</span>).
 These are simple countermeasures against replay attacks and various forms of misuse, especially in cases when an AS who issued a token and an AS performing exchanges reside in different security domains.
 Typically, self-contained tokens include the aud claim (an array of strings) representing their audience (other types of tokens provide other means for the same).
 An extra care <span class="bcp14">SHOULD</span> be taken for tokens that can be passed through the front channel, and tokens that do not explicitly define their type.
