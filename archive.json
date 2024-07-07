@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-04T01:06:25.907593+00:00",
+  "timestamp": "2024-07-07T01:12:13.651403+00:00",
   "repo": "deansaxe/wimse-token-exch-design-team",
   "labels": [
     {
@@ -523,7 +523,7 @@
       "labels": [],
       "body": "Fixing normative references",
       "createdAt": "2024-06-28T22:48:21Z",
-      "updatedAt": "2024-07-03T19:40:18Z",
+      "updatedAt": "2024-07-04T03:46:37Z",
       "baseRepository": "deansaxe/wimse-token-exch-design-team",
       "baseRefName": "main",
       "baseRefOid": "4eda7402f04ab618869bc2d839edb6d020152afe",
@@ -573,9 +573,9 @@
           "comments": [
             {
               "originalPosition": 12,
-              "body": "I suggest replacing `Token exchange is well defined for OAuth 2.0 in {{RFC8693}}` by \"Token exchange is introduced in {{RFC8693}}\".\r\n\r\nIMO, RFC8693 is a bit abstract, it's barely possible to use it before you gets into details of an AS's implementation you deal with. Yet another example... is that RFC8693 refers to all SAML assertions, but hey who would ever want to exchange a SAML AuthnRequest from an SP? :)",
+              "body": "I suggest replacing `Token exchange is well defined for OAuth 2.0 in {{RFC8693}}` by \"Token exchange is introduced in {{RFC8693}}\".\r\n\r\nIMO, RFC8693 is a bit abstract, it's barely possible to use it before you get into details of an AS's implementation you deal with. Yet another example... is that RFC8693 refers to all SAML assertions, but hey who would ever want to exchange a SAML AuthnRequest from an SP? :)",
               "createdAt": "2024-07-01T17:52:28Z",
-              "updatedAt": "2024-07-01T18:23:08Z"
+              "updatedAt": "2024-07-04T03:47:22Z"
             }
           ]
         },
@@ -676,6 +676,26 @@
               "body": "I'm not sure what the request is for OIDC.  Leaving it for now, we can update as we continue writing.",
               "createdAt": "2024-07-03T19:36:50Z",
               "updatedAt": "2024-07-03T19:36:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOLqam7s6AntMu",
+          "commit": {
+            "abbreviatedOid": "ba549fe"
+          },
+          "author": "adeinega",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-07-04T03:46:37Z",
+          "updatedAt": "2024-07-04T03:46:37Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "@dhs-aws, my suggestion was to replace \"OIDC\" by \"OpenID Connect\", that's it. https://openid.net/ did use this abbreviation in a couple of places only, say in the names of some they specs such as OIDC4VP and OIDC4VCI but they don't do it any longer.\r\n",
+              "createdAt": "2024-07-04T03:46:37Z",
+              "updatedAt": "2024-07-04T03:46:37Z"
             }
           ]
         }
