@@ -227,7 +227,7 @@ Table of Contents
    them reside in different security domains.
 
    An extra care should be taken for tokens that can be passed around
-   using the front channel, and those tokens that do not explicitly
+   using the front channel, and for those tokens that do not explicitly
    define their type.  Examples here would be OpenID Connect ID Token,
    and various assertions represented as JWTs.
 
