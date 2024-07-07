@@ -220,11 +220,12 @@ Table of Contents
    and various forms of misuse, especially in cases when an AS who
    issued a token and an AS performing exchanges reside in different
    security domains.  Typically, self-contained tokens include the aud
-   claim (an array of strings) representing their audience.  An extra
-   care SHOULD be taken for tokens that can be passed through the front
-   channel, and tokens that do not explicitly define their type.
-   Examples here would be OpenID Connect ID Token, and various
-   assertions represented as JWTs.
+   claim (an array of strings) representing their audience (other types
+   of tokens provide other means for the same).  An extra care SHOULD be
+   taken for tokens that can be passed through the front channel, and
+   tokens that do not explicitly define their type.  Examples here would
+   be OpenID Connect ID Token, and various assertions represented as
+   JWTs.
 
    TODO Security - data loss in token translation may impact authZ
    decisions.  Be careful when allowing multiple token translations
