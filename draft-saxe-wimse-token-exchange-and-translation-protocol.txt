@@ -3,7 +3,7 @@
 
 
 Internet Engineering Task Force (IETF)                        D. H. Saxe
-Request for Comments: 1                              Amazon Web Services
+Request for Comments: 1                                                 
 Category: Informational                                      G. Fletcher
 ISSN: 2070-1721                                              Capital One
                                                               A. Deinega
@@ -287,8 +287,7 @@ Acknowledgments
 Authors' Addresses
 
    Dean H. Saxe
-   Amazon Web Services
-   Email: deansaxe@amazon.com
+   Email: dean@thesax.es
 
 
    George Fletcher
